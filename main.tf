@@ -2,7 +2,7 @@
 
 resource "aws_instance" "environment-instance" {
   count = 3
-     instance_type = (var.environment == "dev" ? "t8i.micro" :"t3.micro")
+     instance_type = (var.environment == "dev" ? "t8i.micro" :"t3.small")
      ami           = var.environment_ami[count.index]
      security_groups = toset([var.security_groups[count.index]])
      subnet_id = "subnet-09521ea8f750c9a85"
