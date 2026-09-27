@@ -6,5 +6,29 @@ variable "s3_bucket_names" {
   
 }
 
+variable "environment" {
+   type = list(string)
+   default = ["dev", "test", "prod"]
+  }
+
+  variable "security_groups" {
+    type    = list(string)
+      }
+
+  variable "environment_instance" {
+    type = list(string)
+  }
+
+  variable "environment_ami"{
+    type = list(string)
+      }
 
 
+
+
+
+
+
+
+
+  
